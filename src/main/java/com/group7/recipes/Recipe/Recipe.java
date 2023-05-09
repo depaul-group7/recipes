@@ -18,6 +18,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.group7.recipes.model.*;
 
 @Data
@@ -39,7 +42,7 @@ public class Recipe {
   private int servings;
   private String image;
   
-
+  @JsonIgnore
   @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe") // maybe CascadeType.REMOVE is enough for you
   private List<RecipeTags> recipetags = new ArrayList<>();
 }
