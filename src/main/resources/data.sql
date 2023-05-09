@@ -1,4 +1,4 @@
-insert into "recipe"(id,title,body,source,servings,image) values(1,'Pasta with garlic, scallions, cauliflower, and bread crumbs','1T butter
+insert into recipe(id,title,body,source,servings,image) values(1,'Pasta with garlic, scallions, cauliflower, and bread crumbs','1T butter
 1/4 cup whole wheat bread crumbs (I used panko)
 about 2T grated cheese (I used romano)
 6-8 ounces pasta (I used linguine)
@@ -453,5 +453,5 @@ INSERT INTO "tagsinfo"(tag_id,type,is_parent_p,parent_id,ethnic_tag_id,defined_p
 INSERT INTO "tagsinfo"(tag_id,type,is_parent_p,parent_id,ethnic_tag_id,defined_p) VALUES(921,9,FALSE,900,-1,TRUE);
 INSERT INTO "tagsinfo"(tag_id,type,is_parent_p,parent_id,ethnic_tag_id,defined_p) VALUES(922,9,FALSE,900,-1,TRUE);
 INSERT INTO "tagsinfo"(tag_id,type,is_parent_p,parent_id,ethnic_tag_id,defined_p) VALUES(923,9,FALSE,900,-1,TRUE);
-INSERT INTO "recipetags"(recipe_id, tags_id) VALUES(1,2);
-INSERT INTO "recipetags"(recipe_id, tags_id) VALUES(1,17);
+INSERT INTO RECIPE_TAGS(recipe_id, tags_id) VALUES(1,2);
+INSERT INTO RECIPE_TAGS(recipe_id, tags_id) VALUES(1,17);

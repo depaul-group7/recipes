@@ -1,27 +1,34 @@
 package com.group7.recipes.model;
 
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.ManyToOne;
+import com.group7.recipes.Recipe.*;
 import lombok.Data;
 
 @Entity
 @Data
-@Table (name = "\"Recipetags\"")
 public class RecipeTags {
     @Id
-    private long recipe_id;
-    @Id
-    private long tags_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @OneToOne (cascade = CascadeType.ALL)
-    @JoinColumn(name="recipe_id", referencedColumnName = "id")
+    // @Id
+    // private long recipe_id;
+    // @Id
+    // private long tags_id;
+
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "recipe_id", referencedColumnName = "id")
     private Recipe recipe;
 
-    @OneToOne (cascade = CascadeType.ALL)
-    @JoinColumn(name="tags_id", referencedColumnName = "id")
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "tags_id", referencedColumnName = "id")
     private Tags tags;
+
 }
