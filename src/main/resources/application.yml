@@ -1,0 +1,12 @@
+app:
+  doc:
+    version: 2022-2023 spring
+    title: Recipe Project of group 7
+    description: This is the official documentation for Recipe Project of group 7.
+    terms-of-service: http://swagger.io/terms/
+    license:  Apache 2.0
+    url: http://springdoc.org
+
+spring:
+  profiles:
+    active: dev
