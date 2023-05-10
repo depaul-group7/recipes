@@ -1,10 +1,8 @@
-package com.group7.recipes.repository;
+package com.group7.recipes.Tags;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.group7.recipes.model.Tags;
 /**
  * Example of adding additional finders
  */

@@ -1,4 +1,4 @@
-package com.group7.recipes.repository;
+package com.group7.recipes.Tags;
 
 public interface RecipeTagsRepository {
     

@@ -1,4 +1,4 @@
-package com.group7.recipes.model;
+package com.group7.recipes.Tags;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.group7.recipes.model.*;
+import com.group7.recipes.Tags.*;
 
 @Data
 @Entity
