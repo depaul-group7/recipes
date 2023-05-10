@@ -1,6 +1,6 @@
 /**
  * Base Account Data for users
- * Managed by Cameron Cintron
+ * Managed by Huanjia Wang
  *
  * SELECT * FROM ACCOUNT_CURRENCY as ac,ACCOUNT as a where a.id = ac.account_id to join account to accountcurrency
  *
