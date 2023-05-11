@@ -31,4 +31,4 @@
  * @author Huanjia Wang
  */
 
- package com.group7.recipes.Recipe;
+ package com.group7.recipes.Recipe2;

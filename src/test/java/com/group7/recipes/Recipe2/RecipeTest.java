@@ -1,4 +1,4 @@
-package com.group7.recipes.Recipe;
+package com.group7.recipes.Recipe2;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
+
+import com.group7.recipes.Recipe2.Recipe;
+import com.group7.recipes.Recipe2.RecipeRepository;
 
 // Need to get Autowired to work
 @SpringBootTest

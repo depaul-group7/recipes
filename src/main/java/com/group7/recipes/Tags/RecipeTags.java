@@ -1,5 +1,7 @@
 package com.group7.recipes.tags;
 
+import com.group7.recipes.Recipe2.*;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,7 +9,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import com.group7.recipes.Recipe.*;
 import lombok.Data;
 
 @Entity
