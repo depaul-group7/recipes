@@ -9,8 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 
-import com.group7.recipes.Recipe2.Recipe;
-import com.group7.recipes.Recipe2.RecipeRepository;
+import com.group7.recipes.recipe.Recipe;
+import com.group7.recipes.recipe.RecipeRepository;
 
 // Need to get Autowired to work
 @SpringBootTest

@@ -1,6 +1,6 @@
 package com.group7.recipes.tags;
 
-import com.group7.recipes.Recipe2.*;
+import com.group7.recipes.recipe.*;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;

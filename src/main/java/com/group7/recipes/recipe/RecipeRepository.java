@@ -1,4 +1,4 @@
-package com.group7.recipes.Recipe2;
+package com.group7.recipes.recipe;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

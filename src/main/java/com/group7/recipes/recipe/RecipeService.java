@@ -1,4 +1,4 @@
-package com.group7.recipes.Recipe2;
+package com.group7.recipes.recipe;
 
 import java.util.HashMap;
 import java.util.List;

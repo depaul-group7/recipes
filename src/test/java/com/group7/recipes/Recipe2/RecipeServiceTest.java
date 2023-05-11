@@ -13,8 +13,8 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.group7.recipes.Recipe2.Recipe;
-import com.group7.recipes.Recipe2.RecipeRepository;
+import com.group7.recipes.recipe.Recipe;
+import com.group7.recipes.recipe.RecipeRepository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
