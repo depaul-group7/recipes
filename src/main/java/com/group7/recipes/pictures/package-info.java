@@ -1,6 +1,6 @@
-package com.group7.recipes.tags;
+package com.group7.recipes.pictures;
 /**
- * Base Account Data for users
- * Managed by Craig Terry
+ * Pictures for recipes 
+ * Managed by 
  *
  **/
