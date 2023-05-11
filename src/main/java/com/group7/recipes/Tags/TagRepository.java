@@ -1,4 +1,4 @@
-package com.group7.recipes.Tags;
+package com.group7.recipes.tags;
 
 import java.util.List;
 

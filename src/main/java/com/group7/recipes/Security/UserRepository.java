@@ -1,4 +1,4 @@
-package com.group7.recipes.Security;
+package com.group7.recipes.security;
 // package com.group7.recipes.repository;
 
 // import org.springframework.data.jpa.repository.JpaRepository;

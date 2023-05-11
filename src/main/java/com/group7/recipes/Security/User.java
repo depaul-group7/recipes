@@ -1,4 +1,4 @@
-package com.group7.recipes.Security;
+package com.group7.recipes.security;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
