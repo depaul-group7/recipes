@@ -1,12 +1,12 @@
-// package com.group7.recipes;
+package com.group7.recipes;
 
-// import org.junit.jupiter.api.Test;
-// import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-// @SpringBootTest
-// class RecipesApplicationTests {
+@SpringBootTest
+class RecipesApplicationTests {
 
-// 	@Test
-// 	void contextLoads() {
-// 	}
-// }
+	@Test
+	void contextLoads() {
+	}
+}
