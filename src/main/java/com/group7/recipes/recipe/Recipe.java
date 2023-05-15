@@ -3,6 +3,7 @@ package com.group7.recipes.recipe;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.builder.ToStringExclude;
 import org.hibernate.annotations.GenericGenerator;
 
 import jakarta.persistence.CascadeType;
@@ -43,6 +44,10 @@ public class Recipe {
   private String image;
   
   @JsonIgnore
-  @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe") // maybe CascadeType.REMOVE is enough for you
+  @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
   private List<RecipeTags> recipetags = new ArrayList<>();
+
+  @JsonIgnore
+  @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
+  private List<Comment> comments = new ArrayList<>();
 }
