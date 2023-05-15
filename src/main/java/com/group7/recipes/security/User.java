@@ -1,28 +1,33 @@
  package com.group7.recipes.security;
 
- import java.util.Set;
-
- import jakarta.validation.constraints.Email;
- import jakarta.validation.constraints.NotBlank;
- import jakarta.validation.constraints.Size;
-
- import org.springframework.data.annotation.Id;
- import org.springframework.data.mongodb.core.mapping.DBRef;
- import org.springframework.data.mongodb.core.mapping.Document;
-
-
+ import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
- import lombok.Builder;
- import lombok.Data;
- import lombok.NoArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.util.Set;
 
- @Data
- @NoArgsConstructor
- @AllArgsConstructor
- @Builder
- @Document(collection = "Users")
- public class User {
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name="\"User\"")
+public class User {
    @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
 
    @NotBlank
@@ -38,6 +43,6 @@ import lombok.AllArgsConstructor;
    @Size(max = 120)
    private String password;
 
-   @DBRef
+   @OneToMany
    private Set<UserRole> roles;
  }

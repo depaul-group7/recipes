@@ -1,3 +1,4 @@
+
 insert into recipe(id,title,body,source,servings,image) values(1,'Pasta with garlic, scallions, cauliflower, and bread crumbs','1T butter
 1/4 cup whole wheat bread crumbs (I used panko)
 about 2T grated cheese (I used romano)
@@ -14,6 +15,15 @@ In a large skillet, melt butter over medium heat until foamy. Then add bread cru
 In the meantime, begin to prepare your pasta according to the directions on the package. While the pasta is cooking, put about a tablespoon of olive oil in the same pan you used for the bread crumbs. Over medium heat, add the garlic, whites of the scallions, and cauliflower to the skillet. Saute until the cauliflower shows some caramelization. Then add the wine until the florets are tender-crisp. Add salt, pepper, and red pepper flakes.
 When pasta is just shy of al dente, reserve about a cup of the cooking water and drain the pasta. Add the drained pasta to the skillet—still over medium heat—with the veggies and toss with some pasta water, as necessary (I added a little at a time; I ended up using about 1/2 cup), till the pasta is coated and turns easily. You may want to add another little drizzle of olive oil. Again, taste and season accordingly.
 ','https://fullbellysisters.blogspot.com/2012/06/pasta-with-garlic-scallions-cauliflower.html',2,'');
+
+
+INSERT INTO "user"(id,username,password) VALUES(9998,'user1','user1P');
+--INSERT INTO "roles" VALUES(9999, 'ROLE_ADMIN');
+INSERT INTO "roles" VALUES(9998, 'ROLE_USER');
+
+INSERT INTO "user"(id,username,password) VALUES(9999,'admin','admin');
+--INSERT INTO "roles" VALUES(9999, 'ROLE_ADMIN');
+INSERT INTO "roles" VALUES(9999, 'ROLE_ADMIN');
 
 INSERT INTO "tags"(id,name,user_id,description) VALUES(0,'ROOT',-1,'');
 INSERT INTO "tags"(id,name,user_id,description) VALUES(1,'Meals',-1,'');

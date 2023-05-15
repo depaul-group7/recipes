@@ -10,6 +10,11 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+import org.springframework.security.core.userdetails.User;
+
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+
 
 @Configuration
 public class WebSecurityConfig {
@@ -36,20 +41,45 @@ public class WebSecurityConfig {
 		return new BCryptPasswordEncoder();
 	}
 
-	@Bean
-	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		http.cors().and().csrf().disable()
-				.authorizeHttpRequests().requestMatchers("/api/auth/**").permitAll()
-				.requestMatchers("/api/test/**").permitAll()
-				.requestMatchers("/h2-console/**").permitAll()
-				.requestMatchers("/swagger-ui/**").permitAll()
-				.and().formLogin();
+	// @Bean
+	// public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+	// 	// http.cors().and().csrf().disable()
+	// 	// 		.authorizeHttpRequests().requestMatchers("/api/auth/**").permitAll()
+	// 	// 		.requestMatchers("/api/test/**").permitAll()
+	// 	// 		.requestMatchers("/h2-console/**").permitAll()
+	// 	// 		.requestMatchers("/swagger-ui/**").permitAll()
+	// 	// 		.and().formLogin();
 
-		// fix H2 database console: Refused to display ' in a frame because it set
-		// 'X-Frame-Options' to 'deny'
-		http.headers().frameOptions().sameOrigin();
+	// 			http
+    //          .authorizeHttpRequests()
+    //              .requestMatchers("/**").hasRole("USER")
+    //              .and()
+    //          .formLogin();
+				
 
-		http.authenticationProvider(authenticationProvider());
-		return http.build();
-	}
+	// 	// fix H2 database console: Refused to display ' in a frame because it set
+	// 	// 'X-Frame-Options' to 'deny'
+	// 	http.headers().frameOptions().sameOrigin();
+
+	// 	http.authenticationProvider(authenticationProvider());
+	// 	return http.build();
+	// }
+
+
+	// @Bean
+    // public InMemoryUserDetailsManager userDetailsService() {
+    //     UserDetails user1 = User.withUsername("user1")
+    //         .password(passwordEncoder().encode("user1P"))
+    //         .roles("USER")
+    //         .build();
+    //     UserDetails user2 = User.withUsername("user2")
+    //         .password(passwordEncoder().encode("user2P"))
+    //         .roles("USER")
+    //         .build();
+    //     UserDetails admin = User.withUsername("admin")
+    //         .password(passwordEncoder().encode("adminP"))
+    //         .roles("ADMIN")
+    //         .build();
+    //     return new InMemoryUserDetailsManager(user1, user2, admin);
+    // }
 }
