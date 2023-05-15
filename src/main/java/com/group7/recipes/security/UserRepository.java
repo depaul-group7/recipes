@@ -1,10 +1,13 @@
 package com.group7.recipes.security;
-// package com.group7.recipes.repository;
 
-// import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.Optional;
 
-// import com.group7.recipes.model.User;
+import org.springframework.data.repository.CrudRepository;
 
-// public interface UserRepository extends JpaRepository <User, Integer> {
-    
-// }
+public interface UserRepository extends CrudRepository<User, Long> {
+    Optional<User> findByUsername(String username);
+  
+    Boolean existsByUsername(String username);
+  
+    Boolean existsByEmail(String email);
+}

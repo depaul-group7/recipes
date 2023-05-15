@@ -1,3 +1,13 @@
+-- username: user1, password: user1p
+INSERT INTO "user"(id,username,password) VALUES(9998,'user1','$2a$10$QukOBBbOAnOm/JNg6Lh0QuVreRjLblQXxyHRgJ5m8D5b8VhqZnH26');
+--INSERT INTO "roles" VALUES(9999, 'ROLE_ADMIN');
+INSERT INTO "roles" VALUES(9998, 'ROLE_USER');
+
+-- username: admin, password: admin
+INSERT INTO "user"(id,username,password) VALUES(9999,'admin','$2a$10$mqUCwX/Qys9tOJX1xwG0LuZh0PN6zSLZjQbe8CU2FtKRty42XzTnG');
+--INSERT INTO "roles" VALUES(9999, 'ROLE_ADMIN');
+INSERT INTO "roles" VALUES(9999, 'ROLE_ADMIN');
+
 insert into recipe(id,title,body,source,servings,image) values(1,'Pasta with garlic, scallions, cauliflower, and bread crumbs','1T butter
 1/4 cup whole wheat bread crumbs (I used panko)
 about 2T grated cheese (I used romano)
@@ -29,10 +39,7 @@ Table salt
 can (15 ounces) cannellini beans, drained and rinsed (about 1 1/2 cups)
 ¼ cup basil pesto (or 1 tablespoon minced fresh rosemary mixed with 1 teaspoon minced garlic and 1 tablespoon extra-virgin olive oil)
 Ground black pepper
-
-
 1 Sauté pancetta in 1 tablespoon extra-virgin olive oil in soup kettle until crisp, 3 to 4 minutes. In the same kettle bring vegetables, tomatoes, water, and 1 teaspoon salt to boil in a soup kettle or pot. Reduce heat to medium-low; simmer, uncovered and stirring occasionally, until vegetables are tender but still hold their shape, about 1 hour. (Soup can be refrigerated in airtight container for 3 days or frozen for 1 month. Defrost if necessary and reheat before proceeding with recipe.)
-
 2 Add beans and cook just until heated through, about 5 minutes. Remove pot from heat. Stir in pesto (or rosemary-garlic mixture). Adjust seasonings, adding pepper and more salt, if necessary. Ladle soup into bowls and serve immediately.','https://feastable.com/users/stevej/minestrone',6,'');
 insert into recipe(id,title,body,source,servings,image) values(3,'Roasted Branzino with Caper Butter','1 stick unsalted butter, softened
 1 tablespoon finely chopped capers
@@ -192,6 +199,7 @@ Add tomatoes, soup, cooked chicken (cut into bite-size pieces) and spaghetti to 
 Add cheese and stir together, mixing well. Add salt and pepper to taste.
 Heat until cheese is melted thoroughly, stirring occasionally to keep from scorching.
 SERVING SUGGESTIONS: Garnish with freshly grated Parmesan cheese and serve with a salad and hot garlic bread.','https://feastable.com/users/craig/mexican-chicken-spagetti',8,'');
+
 INSERT INTO "tags"(id,name,user_id,description) VALUES(0,'ROOT',-1,'');
 INSERT INTO "tags"(id,name,user_id,description) VALUES(1,'Meals',-1,'');
 INSERT INTO "tags"(id,name,user_id,description) VALUES(2,'Dinner/Supper',-1,'');
