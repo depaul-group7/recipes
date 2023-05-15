@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.authentication.configurati
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
 
 import org.springframework.security.core.userdetails.User;
 
@@ -41,14 +42,16 @@ public class WebSecurityConfig {
 		return new BCryptPasswordEncoder();
 	}
 
-	// @Bean
-	// public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-	// 	// http.cors().and().csrf().disable()
-	// 	// 		.authorizeHttpRequests().requestMatchers("/api/auth/**").permitAll()
-	// 	// 		.requestMatchers("/api/test/**").permitAll()
-	// 	// 		.requestMatchers("/h2-console/**").permitAll()
-	// 	// 		.requestMatchers("/swagger-ui/**").permitAll()
-	// 	// 		.and().formLogin();
+	@Bean
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+		http.cors().and().csrf().disable()
+				.authorizeHttpRequests().requestMatchers(antMatcher("/api/auth/**")).permitAll()
+				.requestMatchers(antMatcher("/api/**")).permitAll() // need to figure out how to explicitly allow api test in the future
+				.requestMatchers(antMatcher("/h2-console/**")).permitAll()
+				.requestMatchers(antMatcher("/swagger-ui/**")).permitAll()
+				.requestMatchers(antMatcher("/v3/**")).permitAll() // grant some requests on swagger-ui
+				.anyRequest().authenticated()
+				.and().formLogin();
 
 	// 			http
     //          .authorizeHttpRequests()
@@ -59,11 +62,11 @@ public class WebSecurityConfig {
 
 	// 	// fix H2 database console: Refused to display ' in a frame because it set
 	// 	// 'X-Frame-Options' to 'deny'
-	// 	http.headers().frameOptions().sameOrigin();
+		http.headers().frameOptions().sameOrigin();
 
-	// 	http.authenticationProvider(authenticationProvider());
-	// 	return http.build();
-	// }
+		http.authenticationProvider(authenticationProvider());
+		return http.build();
+	}
 
 
 	// @Bean

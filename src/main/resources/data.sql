@@ -17,11 +17,11 @@ When pasta is just shy of al dente, reserve about a cup of the cooking water and
 ','https://fullbellysisters.blogspot.com/2012/06/pasta-with-garlic-scallions-cauliflower.html',2,'');
 
 
-INSERT INTO "user"(id,username,password) VALUES(9998,'user1','user1P');
+INSERT INTO "user"(id,username,password) VALUES(9998,'user1','$2a$10$QukOBBbOAnOm/JNg6Lh0QuVreRjLblQXxyHRgJ5m8D5b8VhqZnH26');
 --INSERT INTO "roles" VALUES(9999, 'ROLE_ADMIN');
 INSERT INTO "roles" VALUES(9998, 'ROLE_USER');
 
-INSERT INTO "user"(id,username,password) VALUES(9999,'admin','admin');
+INSERT INTO "user"(id,username,password) VALUES(9999,'admin','$2a$10$mqUCwX/Qys9tOJX1xwG0LuZh0PN6zSLZjQbe8CU2FtKRty42XzTnG');
 --INSERT INTO "roles" VALUES(9999, 'ROLE_ADMIN');
 INSERT INTO "roles" VALUES(9999, 'ROLE_ADMIN');
 
