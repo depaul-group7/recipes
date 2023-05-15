@@ -2,6 +2,11 @@
 This is the official location for the recipe repo of group 7.
 The app we would like to create is a website for users to post, to search and to comment on different recipes all over the world.
 <br/><br/>
+## Credentials for this project
+|Username|password|
+|----------------------|---------------------------------------|
+| user1| user1p |
+| admin| admin |
 ## Group 7
 |Member|Responsibilities|
 |----------------------|---------------------------------------|
