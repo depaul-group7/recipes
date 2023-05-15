@@ -14,6 +14,7 @@
  * <li>Added a Comment Swagger Documentation
  * <li>Integrated swagger into project
  * <li>Added GitHub actions to build jar, to build docker image and push to Docker Hub.
+ * <li>Added findByContentContaining to CommentRepository not discussed in class
  * <li>Added @JsonIgnore @JsonIdentityInfo, @JsonIdentityReference and @JsonProperty on columns not discussed in class
  * <li>Added @GenericGenerator to avoid conflict with already added ids on the id column not discussed in class
  * <li>Added complex jsonPath related assertion to service tests, e.g "$.violations[0].fieldName" not discussed in class
