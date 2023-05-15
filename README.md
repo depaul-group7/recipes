@@ -22,7 +22,7 @@ The app we would like to create is a website for users to post, to search and to
 | #|Area|Decision|Alternatives|Rationale|
 |--|---------------|----------|-----------|--------------------|
 | 1| IDE| Vs Code | IntelliJ | Easier to use, Team familiarity by most members|
-| 2| Dependency Management| Gradle| Maven| Demo, example and teaching are all about Maven|
+| 2| Dependency Management| Gradle| Maven| Demo, example and teaching are all about Gradle|
 | 3| Communication avenue| Teams| Discord| Every DePaul student has a Teams account, it doesn’t require extra registration |
 ||||||
 
