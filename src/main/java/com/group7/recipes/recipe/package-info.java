@@ -1,29 +1,31 @@
 /**
- * Base Account Data for users
+ * Recipe and Comment
  * Managed by Huanjia Wang
  *
- * SELECT * FROM ACCOUNT_CURRENCY as ac,ACCOUNT as a where a.id = ac.account_id to join account to accountcurrency
- *
  * <ol>
- * <li>Created Account and AccountCurrent Repository for Milestone 2
- * <li>Created AccountTest and AccountCurrencyTest for Milestone 2
+ * <li>Created Recipe and Comment Repository for Milestone 2
+ * <li>Created RecipeTest and CommentTest for Milestone 2
+ * <li>Created RecipeService and CommentService for Milestone 3
+ * <li>Created RecipeServiceTest and CommentServiceTest for Milestone 3
  * <li>Added a OneToOne relationship from AccountCurrency to Currencies
- * <li>Added a OneToMany relationship from Account to AccountCurrency
- * <li>Added a OneToMany relationship from Account to AccountInventory
- * <li>Added a Account Service
- * <li>Added a AccountCurrency Service
- * <li>Added a Account Service Swagger Documentation
- * <li>Added AccountCurrency Service Swagger Documentation
+ * <li>Added a OneToMany relationship from Recipe to Comment
+ * <li>Added a OneToMany relationship from Recipe to RecipeTags
+ * <li>Added a Recipe Swagger Documentation
+ * <li>Added a Comment Swagger Documentation
  * <li>Integrated swagger into project
- * <li>Added nullable and unique elements to generatedvalue on columns not discussed in class
+ * <li>Added GitHub actions to build jar, to build docker image and push to Docker Hub.
+ * <li>Added @JsonIgnore @JsonIdentityInfo, @JsonIdentityReference and @JsonProperty on columns not discussed in class
+ * <li>Added @GenericGenerator to avoid conflict with already added ids on the id column not discussed in class
+ * <li>Added complex jsonPath related assertion to service tests, e.g "$.violations[0].fieldName" not discussed in class
  * <li>Added additional notes on services for swagger
 * </ol>
- * @see Account for user account data
- * @see AccountCurrency for user account currencies
- * @see AccountTest for user account unit tests
- * @see AccountCurrencyTest for user account currency unit tests
+ * @see Recipe for recipe data
+ * @see Comment for comments on recipe pages
+ * @see RecipeTest for recipe unit tests
+ * @see CommentTest for comment unit tests
+ * @see RecipeServiceTest for recipe related service tests
+ * @see CommentServiceTest for comment related service tests
  * @see application-dev.yml for logging details
- * @see application-prod.yml for alternate database details
  * @see <a href=" ">Quick Start</a >
  * @see <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/">Reference</a >
  * @see <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repository-query-keywords">Repository Keywords Guide</a >
