@@ -1,4 +1,4 @@
-package com.group7.recipes.Recipe2;
+package com.group7.recipes.Recipe;
 
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.core.Is;
@@ -129,7 +129,7 @@ public class RecipeServiceTest {
 
 
 	@Test
-    public void removeStudent() throws Exception {
+    public void removeRecipe() throws Exception {
 		// given - setup or precondition
 		long beforeSize = recipeRepository.count();
 

@@ -632,3 +632,5 @@ INSERT INTO "tagsinfo"(tag_id,type,is_parent_p,parent_id,ethnic_tag_id,defined_p
 INSERT INTO "tagsinfo"(tag_id,type,is_parent_p,parent_id,ethnic_tag_id,defined_p) VALUES(923,9,FALSE,900,-1,TRUE);
 INSERT INTO RECIPE_TAGS(recipe_id, tags_id) VALUES(1,2);
 INSERT INTO RECIPE_TAGS(recipe_id, tags_id) VALUES(1,17);
+INSERT INTO COMMENT(id, content, recipe_id) VALUES(1, 'What a good recipe!', 1);
+INSERT INTO COMMENT(id, content, recipe_id) VALUES(2, 'Looks so good!', 1);
