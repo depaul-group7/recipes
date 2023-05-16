@@ -1,10 +1,11 @@
-package com.group7.recipes.Recipe2;
+package com.group7.recipes.Recipe;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
@@ -12,8 +13,8 @@ import org.springframework.test.context.jdbc.Sql;
 import com.group7.recipes.recipe.Recipe;
 import com.group7.recipes.recipe.RecipeRepository;
 
-// Need to get Autowired to work
 @SpringBootTest
+// @DataJpaTest
 // @ActiveProfiles("dev")
 // @Sql({"/data-test.sql"})
 public class RecipeTest {
