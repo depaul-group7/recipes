@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.group7.recipes.tags.RecipeTags;
+import com.group7.recipes.tags.models.RecipeTag;
 
 @Data
 @Entity
@@ -45,7 +45,7 @@ public class Recipe {
   
   @JsonIgnore
   @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
-  private List<RecipeTags> recipetags = new ArrayList<>();
+  private List<RecipeTag> recipetags = new ArrayList<>();
 
   @JsonIgnore
   @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")

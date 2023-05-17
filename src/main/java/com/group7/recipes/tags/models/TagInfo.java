@@ -1,4 +1,4 @@
-package com.group7.recipes.tags;
+package com.group7.recipes.tags.models;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -10,8 +10,8 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="\"tagsinfo\"")
-public class TagsInfo {
+@Table(name="\"taginfo\"")
+public class TagInfo {
     @Id
     private long tag_id;
     private int type;
@@ -22,5 +22,5 @@ public class TagsInfo {
     @Id
     @OneToOne (cascade = CascadeType.ALL)
     @JoinColumn(name="tag_id", referencedColumnName = "id")
-    private Tags tags;
+    private Tag tags;
 }

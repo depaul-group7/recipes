@@ -1,4 +1,4 @@
-package com.group7.recipes.tags;
+package com.group7.recipes.tags.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,15 +11,16 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import jakarta.validation.constraints.NotBlank;
 
 @Data
 @Entity
-@Table(name = "\"Tags\"")
+@Table(name = "\"Tag\"")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Tags {
+public class Tag {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
@@ -32,4 +33,8 @@ public class Tags {
   // private User user;
 
   private String description;
+
+  public String ToString(){
+    return "id: " + this.id + " name: " + " userId: " + this.userId;
+  }
 }

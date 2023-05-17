@@ -1,4 +1,4 @@
-package com.group7.recipes.tags;
+package com.group7.recipes.tags.models;
 
 import com.group7.recipes.recipe.*;
 
@@ -13,7 +13,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class RecipeTags {
+public class RecipeTag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,6 +29,6 @@ public class RecipeTags {
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "tags_id", referencedColumnName = "id")
-    private Tags tags;
+    private Tag tags;
 
 }
