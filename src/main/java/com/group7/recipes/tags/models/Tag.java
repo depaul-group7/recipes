@@ -37,4 +37,10 @@ public class Tag {
   public String ToString(){
     return "id: " + this.id + " name: " + " userId: " + this.userId;
   }
+
+  private int type;
+  private boolean isParent_p;
+  private long parentId;
+  private long ethnicTagId;
+  private boolean defined_p;
 }
