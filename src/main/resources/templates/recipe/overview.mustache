@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.css" />
+  <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    /> -->
+</head>
+
+<body>
+  <div>Total {{recipes.size}} result(s) found</div>
+  <div class="glide">
+    <div data-glide-el="track" class="glide__track">
+      <ul class="glide__slides">
+        {{#recipes}}
+        <li class="glide__slide">
+          <div class="card-container">
+            {{#isAdmin}}
+            <a class="card-delete" href="/recipe/delete/{{id}}">X</a>
+            {{/isAdmin}}
+            <div class="card u-clearfix">
+              <div class="card-body">
+                {{#recipetags.size}}
+                {{#recipetags}}
+                <span class="card-number subtle">{{tags.name}}</span>
+                {{/recipetags}}
+                {{/recipetags.size}}
+
+                <span class="card-author subtle">{{creator.username}}</span>
+                <h2 class="card-title">{{title}}</h2>
+                <span class="card-description subtle">{{body}}</span>
+                <a class="card-read" href="/recipe/{{id}}">Read</a>
+                <span class="card-tag card-circle subtle">C</span>
+              </div>
+              <img src="{{image}}" height="361" width="282" alt="" class="card-media" />
+            </div>
+            <div class="card-shadow"></div>
+          </div>
+        </li>
+        {{/recipes}}
+      </ul>
+    </div>
+    <div class="glide__arrows" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M0 12l10.975 11 2.848-2.828-6.176-6.176H24v-3.992H7.646l6.176-6.176L10.975 1 0 12z"></path>
+        </svg>
+      </button>
+      <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><svg xmlns="http://www.w3.org/2000/svg"
+          width="24" height="24" viewBox="0 0 24 24">
+          <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"></path>
+        </svg></button>
+    </div>
+</body>
+<script>
+  new Glide('.glide', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 1,
+    autoplay: 3000,
+    hoverpause: true,
+    animationDuration: 800,
+    animationTimingFunc: 'cubic-bezier(0.165, 0.840, 0.440, 1.000)',
+    breakpoints: {
+      768: {
+        perView: 1
+      },
+      480: {
+        perView: 1
+      }
+    },
+  }).mount();
+
+</script>
+
+<style>
+  .u-clearfix:before,
+  .u-clearfix:after {
+    content: " ";
+    display: table;
+  }
+
+  .u-clearfix:after {
+    clear: both;
+  }
+
+  .u-clearfix {
+    *zoom: 1;
+  }
+
+  .subtle {
+    color: #aaa;
+  }
+
+  .card-container {
+    margin: 25px auto 50px;
+    position: relative;
+    width: 692px;
+  }
+
+  .card {
+    background-color: #fff;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 0 5px rgba(75, 75, 75, .07);
+    z-index: 1;
+  }
+
+  .card-body {
+    display: inline-block;
+    float: left;
+    width: 310px;
+  }
+
+  .card-number {
+    margin-top: 15px;
+  }
+
+  .card-circle {
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 22px;
+    font-size: 12px;
+    height: 25px;
+    text-align: center;
+    width: 25px;
+  }
+
+  .card-author {
+    display: block;
+    font-size: 12px;
+    letter-spacing: .5px;
+    margin: 15px 0 0;
+    text-transform: uppercase;
+  }
+
+  .card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 60px;
+    margin: 10px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-description {
+    /* display: inline-block; */
+    display: -webkit-box;
+    font-weight: 300;
+    line-height: 22px;
+    margin: 10px 0;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-read {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin: 5px 0 20px;
+    position: relative;
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  .card-read:after {
+    background-color: #b8bddd;
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 9px;
+    width: 75%;
+  }
+
+  .card-tag {
+    float: right;
+    margin: 5px 0 0;
+  }
+
+  .card-media {
+    float: right;
+  }
+
+  .card-shadow {
+    background-color: #fff;
+    box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1), 0 0 100px 3px rgba(0, 0, 0, .25);
+    height: 1px;
+    margin: -1px auto 0;
+    width: 80%;
+    z-index: -1;
+  }
+
+  .glide__arrow {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button;
+    box-sizing: inherit;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: #818999;
+    box-shadow: 0 .5rem 4rem 0 rgba(0, 0, 0, .5);
+    width: 46px;
+    height: 46px;
+    margin-top: -30px;
+    right: 3rem;
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.2s ease-in-out 0s, transform 1s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  }
+
+  .glide__arrow--left {
+    left: 0;
+  }
+
+  .card-delete {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    scale: 1;
+    z-index: 2;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+
+</html>

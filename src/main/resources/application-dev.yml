@@ -26,6 +26,8 @@ logging:
         jdbc: DEBUG
       hibernate:
         SQL: DEBUG
+  file:
+    name: log/spring-boot-app.log
 
     # org.springframwork.jdbc = DEBUG
 
