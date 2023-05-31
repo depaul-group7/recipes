@@ -46,7 +46,6 @@ public class WebSecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.cors().and().csrf().disable()
 				.authorizeHttpRequests().requestMatchers(antMatcher("/api/auth/**")).permitAll()
-				.requestMatchers(antMatcher("/api/**")).permitAll() // need to figure out how to explicitly allow api test in the future
 				.requestMatchers(antMatcher("/h2-console/**")).permitAll()
 				.requestMatchers(antMatcher("/swagger-ui/**")).permitAll()
 				.requestMatchers(antMatcher("/v3/**")).permitAll() // grant some requests on swagger-ui
