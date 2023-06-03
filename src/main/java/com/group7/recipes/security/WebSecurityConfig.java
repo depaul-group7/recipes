@@ -7,6 +7,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
@@ -18,6 +19,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 
 @Configuration
+@EnableWebSecurity
 public class WebSecurityConfig {
 	@Autowired
 	private UserDetailsServiceImpl userDetailsService;
@@ -45,9 +47,11 @@ public class WebSecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.cors().and().csrf().disable()
-				.authorizeHttpRequests().requestMatchers(antMatcher("/api/auth/**")).permitAll()
+				.authorizeHttpRequests()
+				.requestMatchers(antMatcher("/signup")).permitAll()
 				.requestMatchers(antMatcher("/h2-console/**")).permitAll()
 				.requestMatchers(antMatcher("/swagger-ui/**")).permitAll()
+				.requestMatchers(antMatcher("/continue")).permitAll()
 				.requestMatchers(antMatcher("/v3/**")).permitAll() // grant some requests on swagger-ui
 				.anyRequest().authenticated()
 				.and().formLogin();
