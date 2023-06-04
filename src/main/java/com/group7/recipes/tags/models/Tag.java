@@ -39,7 +39,7 @@ public class Tag {
   private boolean defined_p;
 
 
-  public String ToString(){
-    return "id: " + this.id + ", name: " + this.name;
-  }
+  // public String ToString(){
+  //   return "id: " + this.id + ", name: " + this.name;
+  // }
 }
