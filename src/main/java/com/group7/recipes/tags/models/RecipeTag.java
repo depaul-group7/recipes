@@ -33,7 +33,7 @@ public class RecipeTag {
     }
 
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "tags_id", referencedColumnName = "id")
+    @JoinColumn(name = "tags_id", referencedColumnName = "tag_id")
     private Tag tags;
 
 }
