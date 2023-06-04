@@ -23,6 +23,8 @@ public class Tag {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
+  private long tag_id;
+
   private String name;
 
   @Column(name = "user_id")
