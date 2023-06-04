@@ -4,6 +4,8 @@ import jakarta.servlet.http.HttpSession;
 
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.group7.recipes.security.User;
@@ -28,7 +31,7 @@ import com.group7.recipes.security.UserRoleType;
 import lombok.extern.log4j.Log4j2;
 
 @Controller
-@RequestMapping("/recipe")
+@RequestMapping
 @Log4j2
 public class RecipeController {
     @Autowired
@@ -38,7 +41,7 @@ public class RecipeController {
     @Autowired
     private UserRoleRepository userRoleRepo;
 
-    @GetMapping
+    @GetMapping("/")
     public String list(Model model, HttpSession session) {
         // just show public recipes
         List<Recipe> list = repo.findByIsPrivate(false);
@@ -75,8 +78,28 @@ public class RecipeController {
         return isCreator;
     }
 
+    @GetMapping("/recipeoftag")
+    public String listByTag(@RequestParam int[] tagids, Model model, HttpSession session) {
+        // just show public recipes
+        for (int i = 0; i < tagids.length; i++) {
+            log.info("tagids index " + i + ": " + tagids[i]);
+        }
+        List<Recipe> list = repo.findByIsPrivate(false);
+        for (int tagid: tagids) {
+            list = list.stream().filter(recipe -> (recipe.getRecipetags().stream().anyMatch(tag -> (tag.getTags().getTag_id() == tagid)))).collect(Collectors.toList());
+        }
+        log.info("length of the list: " + list.size());
+        boolean isAdmin = isAdmin();
+        log.info("isAdmin:" + isAdmin);
+        model.addAttribute("recipes", list);
+        model.addAttribute("isAdmin", isAdmin);
+        // model.addAttribute("isCreatorOrAdmin", isCreatorOrAdmin);
+
+        return "recipe/overview";
+    }
+
     // show recipes belong to the user
-    @GetMapping("/userpage")
+    @GetMapping("/recipe/userpage")
     public String PersonalList(Model model, HttpSession session) {
         // just show public recipes
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -94,7 +117,7 @@ public class RecipeController {
         return "recipe/overview";
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/recipe/{id}")
     public String detail(@PathVariable("id") Long id, Model model, HttpSession session) {
         Recipe recipe = repo.findById(id).orElse(null);
         boolean isAdmin = isAdmin();
@@ -104,7 +127,7 @@ public class RecipeController {
         return "recipe/detail";
     }
 
-    @GetMapping("/delete/{id}")
+    @GetMapping("/recipe/delete/{id}")
     public String delete(@PathVariable("id") Long id, Model model, HttpSession session) {
         repo.deleteById(id);
         return "redirect:/recipe";
