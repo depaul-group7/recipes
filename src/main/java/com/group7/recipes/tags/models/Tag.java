@@ -11,12 +11,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
-import jakarta.validation.constraints.NotBlank;
 
 @Data
 @Entity
-@Table(name = "\"Tag\"")
+@Table(name = "\"tag\"")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -24,19 +22,17 @@ public class Tag {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
-  @NotBlank
+
+  private long tag_id;
+
   private String name;
 
   @Column(name = "user_id")
-  private String userId;
+  private long userId;
 
   // private User user;
 
   private String description;
-
-  public String ToString(){
-    return "id: " + this.id + " name: " + " userId: " + this.userId;
-  }
 
   private int type;
   private boolean isParent_p;

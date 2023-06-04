@@ -42,8 +42,8 @@ public class RecipeService {
         content = {@Content(mediaType="application/json", schema=@Schema(implementation=Recipe.class))})
     public List<Recipe> list() {
         log.traceEntry("Enter list");
-        var retval = repo.findAll();
-        log.traceExit("Exit list", retval);        
+        var returnVal = repo.findAll();
+        log.traceExit("Exit list", returnVal);        
         return repo.findAll();
     }
 

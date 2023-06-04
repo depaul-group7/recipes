@@ -86,6 +86,8 @@ public class RecipeServiceTest {
 			int returnId = Integer.parseInt(stringResponse);
 
 			response.andExpect(MockMvcResultMatchers.status().isOk());
+			
+			
 			assertNotEquals(returnId, recipe.getId());
     }
 
