@@ -8,7 +8,15 @@ INSERT INTO "user"(id,username,password) VALUES(9999,'admin','$2a$10$mqUCwX/Qys9
 --INSERT INTO "roles" VALUES(9999, 'ROLE_ADMIN');
 INSERT INTO "roles" VALUES(9999, 'ROLE_ADMIN');
 
-insert into recipe(id,title,body,source,servings,image) values(1,'Pasta with garlic, scallions, cauliflower, and bread crumbs','1T butter
+-- username: Craig Terry, password: password
+INSERT INTO "user"(id,username,password) VALUES(1,'Craig Terry','$2a$12$PnHZ8pA8vdGuWar27uOq4.AKddCUM6AnrRvRnvRgb2PHtGOqhGT1q');
+INSERT INTO "user_roles"("user_id","roles_roleid") VALUES(1,9999);
+
+-- username: Huanjia Wang, password: password
+INSERT INTO "user"(id,username,password) VALUES(2,'Huanjia Wang','$2a$12$PnHZ8pA8vdGuWar27uOq4.AKddCUM6AnrRvRnvRgb2PHtGOqhGT1q');
+INSERT INTO "user_roles"("user_id","roles_roleid") VALUES(1,9998);
+
+insert into recipe(id,title,body,source,servings,image,creator_id) values(1,'Pasta with garlic, scallions, cauliflower, and bread crumbs','1T butter
 1/4 cup whole wheat bread crumbs (I used panko)
 about 2T grated cheese (I used romano)
 6-8 ounces pasta (I used linguine)
@@ -23,8 +31,8 @@ couple of pinches red pepper flakes, optional
 In a large skillet, melt butter over medium heat until foamy. Then add bread crumbs, tossing to coat in butter, until toasted and lightly browned. Remove from pan into small bowl; mix in cheese and about a tablespoon of the green scallion tops.
 In the meantime, begin to prepare your pasta according to the directions on the package. While the pasta is cooking, put about a tablespoon of olive oil in the same pan you used for the bread crumbs. Over medium heat, add the garlic, whites of the scallions, and cauliflower to the skillet. Saute until the cauliflower shows some caramelization. Then add the wine until the florets are tender-crisp. Add salt, pepper, and red pepper flakes.
 When pasta is just shy of al dente, reserve about a cup of the cooking water and drain the pasta. Add the drained pasta to the skillet—still over medium heat—with the veggies and toss with some pasta water, as necessary (I added a little at a time; I ended up using about 1/2 cup), till the pasta is coated and turns easily. You may want to add another little drizzle of olive oil. Again, taste and season accordingly.
-','https://fullbellysisters.blogspot.com/2012/06/pasta-with-garlic-scallions-cauliflower.html',2,'');
-insert into recipe(id,title,body,source,servings,image) values(2,'Minestrone','2 ounces pancetta, minced
+','https://fullbellysisters.blogspot.com/2012/06/pasta-with-garlic-scallions-cauliflower.html',2,'https://4.bp.blogspot.com/-mhULYfIdIiM/T-kLTNS24LI/AAAAAAAAB08/dcFsoqM3e-8/s1600/IMG_5400.JPG',1);
+insert into recipe(id,title,body,source,servings,image,creator_id) values(2,'Minestrone','2 ounces pancetta, minced
 1 tablespoon extra-virgin olive oil
 2 small leeks (or 1 large), white and light green parts sliced thin crosswise (about 3/4 cup) and washed thoroughly
 2 medium carrots, peeled and cut into small dice (about 3/4 cup)
@@ -40,8 +48,8 @@ can (15 ounces) cannellini beans, drained and rinsed (about 1 1/2 cups)
 ¼ cup basil pesto (or 1 tablespoon minced fresh rosemary mixed with 1 teaspoon minced garlic and 1 tablespoon extra-virgin olive oil)
 Ground black pepper
 1 Sauté pancetta in 1 tablespoon extra-virgin olive oil in soup kettle until crisp, 3 to 4 minutes. In the same kettle bring vegetables, tomatoes, water, and 1 teaspoon salt to boil in a soup kettle or pot. Reduce heat to medium-low; simmer, uncovered and stirring occasionally, until vegetables are tender but still hold their shape, about 1 hour. (Soup can be refrigerated in airtight container for 3 days or frozen for 1 month. Defrost if necessary and reheat before proceeding with recipe.)
-2 Add beans and cook just until heated through, about 5 minutes. Remove pot from heat. Stir in pesto (or rosemary-garlic mixture). Adjust seasonings, adding pepper and more salt, if necessary. Ladle soup into bowls and serve immediately.','https://feastable.com/users/stevej/minestrone',6,'');
-insert into recipe(id,title,body,source,servings,image) values(3,'Roasted Branzino with Caper Butter','1 stick unsalted butter, softened
+2 Add beans and cook just until heated through, about 5 minutes. Remove pot from heat. Stir in pesto (or rosemary-garlic mixture). Adjust seasonings, adding pepper and more salt, if necessary. Ladle soup into bowls and serve immediately.','https://feastable.com/users/stevej/minestrone',6,'',1);
+insert into recipe(id,title,body,source,servings,image,creator_id) values(3,'Roasted Branzino with Caper Butter','1 stick unsalted butter, softened
 1 tablespoon finely chopped capers
 1 tablespoon fresh lemon juice
 1 tablespoon chopped parsley
@@ -60,8 +68,8 @@ In a large, nonstick, ovenproof skillet, heat 2 tablespoons olive oil until shim
 
 Transfer fish to a large rimmed baking sheet. Repeat with remaining 1 tablespoon olive oil and 2 stuffed branzino. Roast fish in the oven for about 10 minutes, until just cooked through.
 
-Serve whole or filleted, passing caper butter at the table.','https://www.foodandwine.com/recipes/roasted-branzino-caper-butter',8,'');
-insert into recipe(id,title,body,source,servings,image) values(4,'Vietnamese Grilled Pork Chops w/ noodle','For the Marinated Pork:
+Serve whole or filleted, passing caper butter at the table.','https://www.foodandwine.com/recipes/roasted-branzino-caper-butter',8,'',1);
+insert into recipe(id,title,body,source,servings,image,creator_id) values(4,'Vietnamese Grilled Pork Chops w/ noodle','For the Marinated Pork:
 1 teaspoon baking soda
 1 1/2 pounds (680g) thin-cut pork chops, preferably from the blade end, or boneless country-style pork ribs, cut into 1/4-inch strips (see note)
 3 stalks lemongrass, white and light green parts only, thinly sliced (about 1 ounce; 30g after trimming)
@@ -98,8 +106,8 @@ If using a charcoal grill, light 1 chimney full of charcoal. When all charcoal i
 
 Grill pork directly over high heat, turning frequently and shifting to cooler side of grill if there are excessive flare-ups, until pork is charred and just cooked through, 3 to 4 minutes total.
 
-Fill serving bowls with chilled noodles, then top with pork, herbs, cucumber, pickled carrot and daikon, and peanuts. Drizzle everything with nuoc cham and serve with lime wedges.','https://feastable.com/users/stevej/vietnamese-grilled-pork-chops-w-slash-noodles',4,'');
-insert into recipe(id,title,body,source,servings,image) values(5,'Spinach, Mushroom and Cheese Breakfast Casserole','4 tablespoons extra-virgin olive oil, plus more for greasing the dish
+Fill serving bowls with chilled noodles, then top with pork, herbs, cucumber, pickled carrot and daikon, and peanuts. Drizzle everything with nuoc cham and serve with lime wedges.','https://feastable.com/users/stevej/vietnamese-grilled-pork-chops-w-slash-noodles',4,'',1);
+insert into recipe(id,title,body,source,servings,image,creator_id) values(5,'Spinach, Mushroom and Cheese Breakfast Casserole','4 tablespoons extra-virgin olive oil, plus more for greasing the dish
 8 cups rustic Italian bread, crust removed, cut into 1-inch cubes
 Kosher salt and freshly ground black pepper
 10 ounces cremini mushrooms, sliced (about 4 cups)
@@ -117,8 +125,8 @@ Toss the bread cubes with 2 tablespoons of the oil, 1/4 teaspoon salt and a few 
 Wipe out the skillet. Heat the remaining 2 tablespoons oil over medium-high heat until it starts to shimmer. Add the mushrooms in one layer (resist the urge to stir right away), and cook until they start to brown, about 3 minutes; stir, then continue to brown for 2 minutes more. Add the garlic, thyme, 1/4 teaspoon salt and some pepper, stir continuously for 1 minute, then fold in the spinach and another 1/4 teaspoon salt. Continue to cook, stirring often, until the spinach is wilted, 1 to 2 minutes. Remove from the heat.
 Place half the bread cubes in the prepared casserole dish, and sprinkle them with half each of the Gruyere and Parmesan. Add the mushroom-spinach mixture in an even layer. Top with the remaining bread cubes, Gruyere and Parmesan.
 In a large bowl, whisk together the eggs, half-and-half, 1/2 teaspoon salt and several grinds of pepper. Pour the egg mixture into the casserole dish. Cover with plastic wrap, and refrigerate for at least 6 hours up to overnight. Remove the casserole from the refrigerator 30 minutes before baking.
-Preheat the oven to 350 degrees F. Bake the casserole until the custard is set and the top is golden brown, 50 to 55 minutes. Cool for at least 15 minutes before serving warm or at room temperature.','https://feastable.com/users/stevej/spinach-mushroom-and-cheese-breakfast-casserole',5,'');
-insert into recipe(id,title,body,source,servings,image) values(6,'Simple Vinaigrette','3 tablespoons white wine vinegar or lemon juice
+Preheat the oven to 350 degrees F. Bake the casserole until the custard is set and the top is golden brown, 50 to 55 minutes. Cool for at least 15 minutes before serving warm or at room temperature.','https://feastable.com/users/stevej/spinach-mushroom-and-cheese-breakfast-casserole',5,'',1);
+insert into recipe(id,title,body,source,servings,image,creator_id) values(6,'Simple Vinaigrette','3 tablespoons white wine vinegar or lemon juice
 1 tablespoon water
 4 teaspoons dijon mustard
 1/2 cup neutral oil (such as canola)
@@ -126,8 +134,9 @@ insert into recipe(id,title,body,source,servings,image) values(6,'Simple Vinaigr
 1/2 teaspoon salt
 1/4 teaspoon freshly ground black pepper
 
-Combine all ingredients in small container or squeeze bottle. Seal container and shake vigorously until emulsified. Shake again before each use.','https://feastable.com/users/stevej/simple-vinaigrette',6,'');
-insert into recipe(id,title,body,source,servings,image) values(7,'Horseradish Sauce','From The All New Good Housekeeping Cookbook
+
+Combine all ingredients in small container or squeeze bottle. Seal container and shake vigorously until emulsified. Shake again before each use.','https://feastable.com/users/stevej/simple-vinaigrette',6,'',1);
+insert into recipe(id,title,body,source,servings,image,is_private,creator_id) values(7,'Horseradish Sauce','From The All New Good Housekeeping Cookbook
 p. 95
 edited by Susan Westmoreland
 Copyright 2001
@@ -146,8 +155,8 @@ makes 1 2/3 cup
 
 Note:
 Can sub whipped cream for sour cream,
-fold into mixture, but we prefer sour cream.','https://feastable.com/users/Cheryl/horseradish-sauce',0,'');
-insert into recipe(id,title,body,source,servings,image) values(8,'Chipotle Chicken Enchiladas','9 corn tortillas
+fold into mixture, but we prefer sour cream.','https://feastable.com/users/Cheryl/horseradish-sauce',0,'',1,1);
+insert into recipe(id,title,body,source,servings,image,creator_id) values(8,'Chipotle Chicken Enchiladas','9 corn tortillas
 1 15 oz. can crushed fire roasted tomatoes
 1 cup low sodium chicken broth
 2 tablespoons packed fresh cilantro
@@ -167,8 +176,8 @@ Preheat broiler.
 3. Coat a 9x11 baking dish with oil. Mix the chicken, sour cream, 1/2 cup of each cheese and a pinch of s&p in medium bowl. Warm 8 tortillas in microwave. Spoon about 1/4 cup chicken mixture and roll up to enclose. Put in baking dish and brush with remaining tablespoon of oil.
 4 Broil the enchiladas until lightly toasted, 3-5 min. Top with sauce and sprinkle with remaining cheeses. Broil until sauce is bubbling and cheese melts. 1-2 min. Top with avocado and scallions.
 
-P.S. The sauce alone is a 5 *, wonderful dipping sauce for Tostitos!!','https://feastable.com/users/Cheryl/chipotle-chicken-enchiladas',4,'');
-insert into recipe(id,title,body,source,servings,image) values(9,'Tuna Macaroni Salad','1 lb of macaroni elbows
+P.S. The sauce alone is a 5 *, wonderful dipping sauce for Tostitos!!','https://feastable.com/users/Cheryl/chipotle-chicken-enchiladas',4,'',1);
+insert into recipe(id,title,body,source,servings,image,creator_id) values(9,'Tuna Macaroni Salad','1 lb of macaroni elbows
 2-3 celery ribs, diced
 2 tomatoes, chopped
 1/4 cup green olives, sliced
@@ -178,8 +187,8 @@ mayonaisse
 
 Boil the macaroni for about 10 minutes or until done. Drain and place in a large bowl.
 Add all ingredients and mix. For mayo, add 1/2 cup at a time until the mixture binds together.
-Refrigerate/serve chilled.','https://feastable.com/users/stevej/tuna-macaroni-salad',8,'');
-insert into recipe(id,title,body,source,servings,image) values(10,'Mexican Chicken Spagetti','1 lb boneless, skinless chicken breasts
+Refrigerate/serve chilled.','https://feastable.com/users/stevej/tuna-macaroni-salad',8,'',2);
+insert into recipe(id,title,body,source,servings,image,is_private,creator_id) values(10,'Mexican Chicken Spagetti','1 lb boneless, skinless chicken breasts
 1 lb velveeta cheese, regular or mexican...
 1 can(s) rotel tomatoes, regular or hot
 1 lb spaghetti pasta
@@ -197,7 +206,8 @@ Melt the butter in that same (empty) pot and saute the onion and bell pepper.
 Add tomatoes, soup, cooked chicken (cut into bite-size pieces) and spaghetti to the sauteed onion mixture, one at a time, and gently mix together.
 Add cheese and stir together, mixing well. Add salt and pepper to taste.
 Heat until cheese is melted thoroughly, stirring occasionally to keep from scorching.
-SERVING SUGGESTIONS: Garnish with freshly grated Parmesan cheese and serve with a salad and hot garlic bread.','https://feastable.com/users/craig/mexican-chicken-spagetti',8,'');
+
+SERVING SUGGESTIONS: Garnish with freshly grated Parmesan cheese and serve with a salad and hot garlic bread.','https://feastable.com/users/craig/mexican-chicken-spagetti',8,'',1,1);
 
 INSERT INTO "tag"(tag_id,name,user_id,description,type,is_parent_p,parent_id,ethnic_tag_id,defined_p) VALUES(0,'ROOT',-1,'',0,TRUE,-1,-1,TRUE);
 INSERT INTO "tag"(tag_id,name,user_id,description,type,is_parent_p,parent_id,ethnic_tag_id,defined_p) VALUES(1,'Meals',-1,'',1,TRUE,0,-1,TRUE);

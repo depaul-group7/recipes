@@ -19,6 +19,12 @@ import com.group7.recipes.recipe.CommentRequest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestBuilders;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 // Ensure there is no port conflict when running JUnit test
 @SpringBootTest
@@ -32,6 +38,15 @@ public class CommentServiceTest {
 	@Autowired
 	private MockMvc mockMvc;
 
+	@Autowired
+	private AuthenticationManager authenticationManager;
+
+	@BeforeEach
+	public void setupAuthentication() {
+			Authentication auth = new UsernamePasswordAuthenticationToken("user1", "user1p");
+			Authentication authenticated = authenticationManager.authenticate(auth);
+			SecurityContextHolder.getContext().setAuthentication(authenticated);
+	}
 
 	@Test
 	public void getAllComments() throws Exception {

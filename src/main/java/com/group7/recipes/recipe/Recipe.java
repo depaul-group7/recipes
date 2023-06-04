@@ -12,7 +12,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -22,7 +24,9 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.group7.recipes.tags.models.RecipeTag;
+import com.group7.recipes.security.User;
 
 @Data
 @Entity
@@ -42,12 +46,24 @@ public class Recipe {
   private String source;
   private int servings;
   private String image;
+  // compatable both for h2 and postgresql
+  @Column(columnDefinition="BOOLEAN DEFAULT false")
+  private boolean isPrivate;
   
   @JsonIgnore
   @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
   private List<RecipeTag> recipetags = new ArrayList<>();
 
+  @JsonManagedReference
+  public List<RecipeTag> getRecipetags(){
+    return recipetags;
+  }
   @JsonIgnore
   @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
   private List<Comment> comments = new ArrayList<>();
+
+  @OneToOne
+  @JoinColumn(name = "creator_id", referencedColumnName = "id")
+  private User creator;
+
 }

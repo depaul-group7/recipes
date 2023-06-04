@@ -39,9 +39,4 @@ public class Tag {
   private long parentId;
   private long ethnicTagId;
   private boolean defined_p;
-
-
-  // public String ToString(){
-  //   return "id: " + this.id + ", name: " + this.name;
-  // }
 }

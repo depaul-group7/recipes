@@ -1,5 +1,6 @@
 package com.group7.recipes.tags.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.group7.recipes.recipe.*;
 
 import jakarta.persistence.CascadeType;
@@ -26,6 +27,10 @@ public class RecipeTag {
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "recipe_id", referencedColumnName = "id")
     private Recipe recipe;
+    @JsonBackReference
+    public Recipe getRecipe(){
+        return recipe;
+    }
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "tags_id", referencedColumnName = "id")
