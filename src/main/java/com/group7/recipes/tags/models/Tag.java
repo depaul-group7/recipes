@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "\"tag\"", uniqueConstraints = @UniqueConstraint(columnNames = "tag_id"))
+@Table(name = "\"tag\"")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
