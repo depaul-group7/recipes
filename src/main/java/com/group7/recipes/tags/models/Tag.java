@@ -1,10 +1,13 @@
 package com.group7.recipes.tags.models;
 
+import org.hibernate.validator.constraints.UniqueElements;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 
@@ -14,7 +17,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "\"tag\"")
+@Table(name = "\"tag\"", uniqueConstraints = @UniqueConstraint(columnNames = "tag_id"))
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
