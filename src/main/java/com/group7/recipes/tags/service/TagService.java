@@ -56,8 +56,8 @@ public class TagService {
 
     @GetMapping("search")
     @Operation(summary = "Returns set of tags")
-    public List<String> search(@RequestParam(value="term", required = false, defaultValue = "") String term) {
-        List<String> suggestions = new ArrayList<String>();
+    public List<Tag> search(@RequestParam(value="term", required = false, defaultValue = "") String term) {
+        List<Tag> suggestions = new ArrayList<Tag>();
         if (term.length() < 3) {
             return suggestions;
         }
@@ -66,8 +66,8 @@ public class TagService {
                 allTags = repo.findByNameContainingIgnoreCase(term);
             }
             for (Tag tag : allTags) {
-                if (tag.toString().toLowerCase().contains(term.toLowerCase())) {
-                    suggestions.add(tag.ToString());
+                if (tag.getName().toLowerCase().contains(term.toLowerCase())) {
+                    suggestions.add(tag);
                 }
             } 
         } catch (Exception e) {

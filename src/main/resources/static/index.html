@@ -47,18 +47,32 @@
             </div>
         </nav>
         <script>
+            let globalMap = new Map();
             $(document).ready(function(){
                 
               $('#search_data').tokenfield({
                   autocomplete :{
-                      source: "api/tag/search",
+                      source: function(request, response)
+                        {
+                            jQuery.get(`api/tag/search`, {
+                                term : request.term
+                            }, function(data){
+                                data.forEach(({id, name}) => {
+                                    globalMap.set(name, id);
+                                })
+                                response(data.map((tag) => tag.name));
+                            });
+                        },
                       minlength: 3
                   }
                   
               });
           
               $('#search').click(function(){
-                  $('#tag').text($('#search_data').val());
+                let tagIds = $('#search_data').val().split(", ").map((name) => globalMap.get(name));
+                tagIds = [...new Set(tagIds)];
+                console.log("tagIds " + tagIds);
+                window.location.href = `/recipeoftag?tagids=${tagIds}`;
               });
           
             });
