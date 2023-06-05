@@ -130,7 +130,7 @@ public class RecipeController {
     @GetMapping("/recipe/delete/{id}")
     public String delete(@PathVariable("id") Long id, Model model, HttpSession session) {
         repo.deleteById(id);
-        return "redirect:/recipe";
+        return "redirect:/";
     }
 
 }
