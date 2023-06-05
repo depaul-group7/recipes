@@ -65,9 +65,9 @@ The app we would like to create is a website for users to post, to search and to
 3. We first pick Maven because we are more familiar with it. Later we transferred to Gradle since the demo, the example and the teaching are all about Gradle. Using Gradle to manage our project would just make our life much easier.
 4. We decided to restructure the folders to map our responsibilities, which could also ease the difficulty to identify indivision contributions and make our commits less conflict-prone.
 5. Transfer the code base to a new repo location under a newly created organization so that members could all be granted permission to add secrets to the repo
-- We decided to add security layer to this project. We plan to store the info of our user into relational database, and to use RBAC(role based access control) as our authorization mechanism.
-- We decide to add UI layer to our project, and adopt mustache as our server side template engine.
-- We agreed on cutting some of the features that we decide not to implement due to time issue, like adding recipe or tag through web page.
+6. We decided to add security layer to this project. We plan to store the info of our user into relational database, and to use RBAC(role based access control) as our authorization mechanism.
+7. We decide to add UI layer to our project, and adopt mustache as our server side template engine.
+8. We agreed on cutting some of the features that we decide not to implement due to time issue, like adding recipe or tag through web page.
 
 ## Project Progress:
 1. Tables have been added to the project:
