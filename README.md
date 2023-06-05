@@ -94,3 +94,6 @@ The app we would like to create is a website for users to post, to search and to
 ![successful gitflow](https://github.com/depaul-group7/recipes/assets/63690540/c534167c-36dc-412c-8930-ef8537a532a2)
 ![gradlew bootRun](https://github.com/depaul-group7/recipes/assets/63690540/f304a5b5-f226-46db-8cb9-5fd377104c20)
 ![openapi](https://github.com/depaul-group7/recipes/assets/63690540/35ac4b51-2ed5-43e3-b2a6-43e83f851e5a)
+![login](https://github.com/depaul-group7/recipes/assets/63690540/9025d809-95e4-4799-b92e-f57ad576e88c)
+![overview](https://github.com/depaul-group7/recipes/assets/63690540/89fd2c0c-8d17-4a1d-9bd4-956056b8e7af)
+![search](https://github.com/depaul-group7/recipes/assets/63690540/35d1249b-3aa9-4bc9-bab9-cffda8a79628)
