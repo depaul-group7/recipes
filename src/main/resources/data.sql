@@ -48,7 +48,7 @@ can (15 ounces) cannellini beans, drained and rinsed (about 1 1/2 cups)
 ¼ cup basil pesto (or 1 tablespoon minced fresh rosemary mixed with 1 teaspoon minced garlic and 1 tablespoon extra-virgin olive oil)
 Ground black pepper
 1 Sauté pancetta in 1 tablespoon extra-virgin olive oil in soup kettle until crisp, 3 to 4 minutes. In the same kettle bring vegetables, tomatoes, water, and 1 teaspoon salt to boil in a soup kettle or pot. Reduce heat to medium-low; simmer, uncovered and stirring occasionally, until vegetables are tender but still hold their shape, about 1 hour. (Soup can be refrigerated in airtight container for 3 days or frozen for 1 month. Defrost if necessary and reheat before proceeding with recipe.)
-2 Add beans and cook just until heated through, about 5 minutes. Remove pot from heat. Stir in pesto (or rosemary-garlic mixture). Adjust seasonings, adding pepper and more salt, if necessary. Ladle soup into bowls and serve immediately.','https://feastable.com/users/stevej/minestrone',6,'',1);
+2 Add beans and cook just until heated through, about 5 minutes. Remove pot from heat. Stir in pesto (or rosemary-garlic mixture). Adjust seasonings, adding pepper and more salt, if necessary. Ladle soup into bowls and serve immediately.','https://feastable.com/users/stevej/minestrone',6,'https://www.aberdeenskitchen.com/wp-content/uploads/2019/10/Easy-Classic-Minestrone-Soup-1-Fi-1200.jpg',1);
 insert into recipe(id,title,body,source,servings,image,creator_id) values(3,'Roasted Branzino with Caper Butter','1 stick unsalted butter, softened
 1 tablespoon finely chopped capers
 1 tablespoon fresh lemon juice
@@ -68,7 +68,7 @@ In a large, nonstick, ovenproof skillet, heat 2 tablespoons olive oil until shim
 
 Transfer fish to a large rimmed baking sheet. Repeat with remaining 1 tablespoon olive oil and 2 stuffed branzino. Roast fish in the oven for about 10 minutes, until just cooked through.
 
-Serve whole or filleted, passing caper butter at the table.','https://www.foodandwine.com/recipes/roasted-branzino-caper-butter',8,'',1);
+Serve whole or filleted, passing caper butter at the table.','https://www.foodandwine.com/recipes/roasted-branzino-caper-butter',8,'https://www.deliciousorchardsnj.com/wp-content/uploads/Photo-Mar-04-2-28-46-PM-scaled.jpg',1);
 insert into recipe(id,title,body,source,servings,image,creator_id) values(4,'Vietnamese Grilled Pork Chops w/ noodle','For the Marinated Pork:
 1 teaspoon baking soda
 1 1/2 pounds (680g) thin-cut pork chops, preferably from the blade end, or boneless country-style pork ribs, cut into 1/4-inch strips (see note)
@@ -106,7 +106,7 @@ If using a charcoal grill, light 1 chimney full of charcoal. When all charcoal i
 
 Grill pork directly over high heat, turning frequently and shifting to cooler side of grill if there are excessive flare-ups, until pork is charred and just cooked through, 3 to 4 minutes total.
 
-Fill serving bowls with chilled noodles, then top with pork, herbs, cucumber, pickled carrot and daikon, and peanuts. Drizzle everything with nuoc cham and serve with lime wedges.','https://feastable.com/users/stevej/vietnamese-grilled-pork-chops-w-slash-noodles',4,'',1);
+Fill serving bowls with chilled noodles, then top with pork, herbs, cucumber, pickled carrot and daikon, and peanuts. Drizzle everything with nuoc cham and serve with lime wedges.','https://feastable.com/users/stevej/vietnamese-grilled-pork-chops-w-slash-noodles',4,'https://4.bp.blogspot.com/-E__DHbw2Eas/Wi1M21ZBquI/AAAAAAAAHW4/vRkPtOQzSQ457_qEOUM0RuAsmSu_tfeXwCLcBGAs/s1600/AlanGoh.jpg',1);
 insert into recipe(id,title,body,source,servings,image,creator_id) values(5,'Spinach, Mushroom and Cheese Breakfast Casserole','4 tablespoons extra-virgin olive oil, plus more for greasing the dish
 8 cups rustic Italian bread, crust removed, cut into 1-inch cubes
 Kosher salt and freshly ground black pepper
@@ -125,7 +125,7 @@ Toss the bread cubes with 2 tablespoons of the oil, 1/4 teaspoon salt and a few 
 Wipe out the skillet. Heat the remaining 2 tablespoons oil over medium-high heat until it starts to shimmer. Add the mushrooms in one layer (resist the urge to stir right away), and cook until they start to brown, about 3 minutes; stir, then continue to brown for 2 minutes more. Add the garlic, thyme, 1/4 teaspoon salt and some pepper, stir continuously for 1 minute, then fold in the spinach and another 1/4 teaspoon salt. Continue to cook, stirring often, until the spinach is wilted, 1 to 2 minutes. Remove from the heat.
 Place half the bread cubes in the prepared casserole dish, and sprinkle them with half each of the Gruyere and Parmesan. Add the mushroom-spinach mixture in an even layer. Top with the remaining bread cubes, Gruyere and Parmesan.
 In a large bowl, whisk together the eggs, half-and-half, 1/2 teaspoon salt and several grinds of pepper. Pour the egg mixture into the casserole dish. Cover with plastic wrap, and refrigerate for at least 6 hours up to overnight. Remove the casserole from the refrigerator 30 minutes before baking.
-Preheat the oven to 350 degrees F. Bake the casserole until the custard is set and the top is golden brown, 50 to 55 minutes. Cool for at least 15 minutes before serving warm or at room temperature.','https://feastable.com/users/stevej/spinach-mushroom-and-cheese-breakfast-casserole',5,'',1);
+Preheat the oven to 350 degrees F. Bake the casserole until the custard is set and the top is golden brown, 50 to 55 minutes. Cool for at least 15 minutes before serving warm or at room temperature.','https://feastable.com/users/stevej/spinach-mushroom-and-cheese-breakfast-casserole',5,'https://i1.wp.com/whatagirleats.com/wp-content/uploads/2016/09/Spinach-Mushroom-Casserole-100-close.jpg',1);
 insert into recipe(id,title,body,source,servings,image,creator_id) values(6,'Simple Vinaigrette','3 tablespoons white wine vinegar or lemon juice
 1 tablespoon water
 4 teaspoons dijon mustard
@@ -135,7 +135,7 @@ insert into recipe(id,title,body,source,servings,image,creator_id) values(6,'Sim
 1/4 teaspoon freshly ground black pepper
 
 
-Combine all ingredients in small container or squeeze bottle. Seal container and shake vigorously until emulsified. Shake again before each use.','https://feastable.com/users/stevej/simple-vinaigrette',6,'',1);
+Combine all ingredients in small container or squeeze bottle. Seal container and shake vigorously until emulsified. Shake again before each use.','https://feastable.com/users/stevej/simple-vinaigrette',6,'https://www.primaverakitchen.com/wp-content/uploads/2014/06/how-to-make-basic-vinaigrette3.jpg',1);
 insert into recipe(id,title,body,source,servings,image,is_private,creator_id) values(7,'Horseradish Sauce','From The All New Good Housekeeping Cookbook
 p. 95
 edited by Susan Westmoreland
@@ -155,7 +155,7 @@ makes 1 2/3 cup
 
 Note:
 Can sub whipped cream for sour cream,
-fold into mixture, but we prefer sour cream.','https://feastable.com/users/Cheryl/horseradish-sauce',0,'',1,1);
+fold into mixture, but we prefer sour cream.','https://feastable.com/users/Cheryl/horseradish-sauce',0,'https://www.jessicagavin.com/wp-content/uploads/2021/12/horseradish-sauce-4-600x900.jpg',1,1);
 insert into recipe(id,title,body,source,servings,image,creator_id) values(8,'Chipotle Chicken Enchiladas','9 corn tortillas
 1 15 oz. can crushed fire roasted tomatoes
 1 cup low sodium chicken broth
@@ -176,7 +176,7 @@ Preheat broiler.
 3. Coat a 9x11 baking dish with oil. Mix the chicken, sour cream, 1/2 cup of each cheese and a pinch of s&p in medium bowl. Warm 8 tortillas in microwave. Spoon about 1/4 cup chicken mixture and roll up to enclose. Put in baking dish and brush with remaining tablespoon of oil.
 4 Broil the enchiladas until lightly toasted, 3-5 min. Top with sauce and sprinkle with remaining cheeses. Broil until sauce is bubbling and cheese melts. 1-2 min. Top with avocado and scallions.
 
-P.S. The sauce alone is a 5 *, wonderful dipping sauce for Tostitos!!','https://feastable.com/users/Cheryl/chipotle-chicken-enchiladas',4,'',1);
+P.S. The sauce alone is a 5 *, wonderful dipping sauce for Tostitos!!','https://feastable.com/users/Cheryl/chipotle-chicken-enchiladas',4,'https://images.ctfassets.net/vmuke7sdou62/6AczlekinRjbxCim6cx3nu/1a18e03fe21fae82ff2ce8216a31a0d8/Full_res_JPG-RR_Post_Holiday_Sale_Chipotle_Chicken_Enchiladas_Recipe_Glam.jpg',1);
 insert into recipe(id,title,body,source,servings,image,creator_id) values(9,'Tuna Macaroni Salad','1 lb of macaroni elbows
 2-3 celery ribs, diced
 2 tomatoes, chopped
@@ -187,7 +187,7 @@ mayonaisse
 
 Boil the macaroni for about 10 minutes or until done. Drain and place in a large bowl.
 Add all ingredients and mix. For mayo, add 1/2 cup at a time until the mixture binds together.
-Refrigerate/serve chilled.','https://feastable.com/users/stevej/tuna-macaroni-salad',8,'',2);
+Refrigerate/serve chilled.','https://feastable.com/users/stevej/tuna-macaroni-salad',8,'https://www.thecountrycook.net/wp-content/uploads/2015/12/Tuna-Macaroni-Salad-square.jpg',2);
 insert into recipe(id,title,body,source,servings,image,is_private,creator_id) values(10,'Mexican Chicken Spagetti','1 lb boneless, skinless chicken breasts
 1 lb velveeta cheese, regular or mexican...
 1 can(s) rotel tomatoes, regular or hot
@@ -207,7 +207,7 @@ Add tomatoes, soup, cooked chicken (cut into bite-size pieces) and spaghetti to 
 Add cheese and stir together, mixing well. Add salt and pepper to taste.
 Heat until cheese is melted thoroughly, stirring occasionally to keep from scorching.
 
-SERVING SUGGESTIONS: Garnish with freshly grated Parmesan cheese and serve with a salad and hot garlic bread.','https://feastable.com/users/craig/mexican-chicken-spagetti',8,'',1,1);
+SERVING SUGGESTIONS: Garnish with freshly grated Parmesan cheese and serve with a salad and hot garlic bread.','https://feastable.com/users/craig/mexican-chicken-spagetti',8,'https://i2.wp.com/buythiscookthat.com/wp-content/uploads/2018/11/Mexican-Chicken-Spaghetti-3.jpg',1,1);
 
 INSERT INTO "tag"(tag_id,name,user_id,description,type,is_parent_p,parent_id,ethnic_tag_id,defined_p) VALUES(0,'ROOT',-1,'',0,TRUE,-1,-1,TRUE);
 INSERT INTO "tag"(tag_id,name,user_id,description,type,is_parent_p,parent_id,ethnic_tag_id,defined_p) VALUES(1,'Meals',-1,'',1,TRUE,0,-1,TRUE);
