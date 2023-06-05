@@ -7,6 +7,8 @@ The app we would like to create is a website for users to post, to search and to
 |----------------------|---------------------------------------|
 | user1| user1p |
 | admin| admin |
+| Craig Terry| password |
+| Huanjia Wang| password |
 ## Group 7
 |Member|Responsibilities|
 |----------------------|---------------------------------------|
