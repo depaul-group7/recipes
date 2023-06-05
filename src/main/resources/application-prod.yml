@@ -1,0 +1,27 @@
+environment: dev
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    generate-ddl: true
+
+  sql:
+    init:
+      mode: always
+
+  datasource:
+    generate-unique-name: false
+    name: recipes
+  
+  h2:
+    console:
+      enabled: true
+    
+logging:
+  level:
+    root: ERROR
+  file:
+    name: log/spring-boot-app.log
+
+    # org.springframwork.jdbc = DEBUG
+
