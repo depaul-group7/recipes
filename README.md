@@ -12,7 +12,7 @@ The app we would like to create is a website for users to post, to search and to
 |----------------------|---------------------------------------|
 | Hristina Dokic| Credential related entities under security folder |
 | Craig Terry| Tag related entities under tags folder |
-| Huanjia Wang| Recipe, Comment under recipe foler |
+| Huanjia Wang| Recipe, Comment under recipe folder |
 
 ## Conflict Resolutions
 1. Primarily vote (because of odd number of members).  If a member feels strongly about an issue/area, then they take charge and/or instruct.
@@ -54,6 +54,9 @@ The app we would like to create is a website for users to post, to search and to
 - Apr 30: Had a discussion over the pros and cons between Maven and Gradle and finally made the decision to move from Maven to Gradle.
 - May 3: Discussion on how we are going to divide the responsibility since we kind of had some misunderstanding on the rubrics of this class.  The meeting ended with the decision of restructuring the folders to better show responsibility.
 - May 9: Transfer the code base to a new repo location under a newly created organization so that members could all be granted permission to add secrets to the repo.
+- May 16: Set goals for adding security layer to this project. Use RBAC(role based access control) as our authorization mechanism
+- May 23: Decide to add UI layer to our project, use mustache as our server side template engine
+- May 30: Cut some of the features that we decide not to implement due to time issue, like adding recipe or tag through web page.
 
 
 ## Decisions made
@@ -62,6 +65,9 @@ The app we would like to create is a website for users to post, to search and to
 3. We first pick Maven because we are more familiar with it. Later we transferred to Gradle since the demo, the example and the teaching are all about Gradle. Using Gradle to manage our project would just make our life much easier.
 4. We decided to restructure the folders to map our responsibilities, which could also ease the difficulty to identify indivision contributions and make our commits less conflict-prone.
 5. Transfer the code base to a new repo location under a newly created organization so that members could all be granted permission to add secrets to the repo
+- We decided to add security layer to this project. We plan to store the info of our user into relational database, and to use RBAC(role based access control) as our authorization mechanism.
+- We decide to add UI layer to our project, and adopt mustache as our server side template engine.
+- We agreed on cutting some of the features that we decide not to implement due to time issue, like adding recipe or tag through web page.
 
 ## Project Progress:
 1. Tables have been added to the project:
@@ -70,11 +76,15 @@ The app we would like to create is a website for users to post, to search and to
 - TagsInfo
 - RecipeTags
 - Comment
+- User
+- UserRole
 2. Added relations between entities.
 3. Added Services for these entities and corresponding service tests.
 4. Added log and swagger integration.
-5. Added GitHub actions to build jar file, build Docker image and push to Docker Hub.
-6. Plan to add UI in the future.
+5. Added config file for different environment.
+6. Added GitHub actions to build jar file, build Docker image and push to Docker Hub.
+7. Added security layer.
+8. Added UI layer.
 
 ## Appendex
 ![test result](https://github.com/depaul-group7/recipes/assets/63690540/14fffc06-ea93-48b4-94fd-8b670335f344)

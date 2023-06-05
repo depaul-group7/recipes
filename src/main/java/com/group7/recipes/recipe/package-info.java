@@ -5,7 +5,7 @@
  * <ol>
  * <li>Created Recipe and Comment Repository for Milestone 2
  * <li>Created RecipeTest and CommentTest for Milestone 2
- * <li>Created RecipeService and CommentService for Milestone 3
+ * <li>Created RecipeService and CommentService, with log integrated, for Milestone 3
  * <li>Created RecipeServiceTest and CommentServiceTest for Milestone 3
  * <li>Added a OneToOne relationship from AccountCurrency to Currencies
  * <li>Added a OneToMany relationship from Recipe to Comment
